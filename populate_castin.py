@@ -25,7 +25,7 @@ def replace_placeholder_with_excel_data(excel_file_path, word_file_path, result_
             doc = Document(word_file_path)
         else:
             doc = Document(cur_dir + "\\pop_temp\\"+str(count-1)+'.docx')
-    # Replace placeholders in the Word document with data from the Excel file
+        # Replace placeholders in the Word document with data from the Excel file
         for paragraph in doc.paragraphs:
             for run in paragraph.runs:
                 for i in range(len(data)):
